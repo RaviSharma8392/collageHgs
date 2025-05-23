@@ -14,3 +14,4 @@ router.patch("/:id", auth, updateBranchController);
 router.delete("/:id", auth, deleteBranchController);
 
 module.exports = router;
+ 
