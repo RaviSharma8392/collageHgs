@@ -21,7 +21,7 @@ const loginAdminController = async (req, res, next) => {
       return ApiResponse.unauthorized("Invalid password").send(res);
     }
 
-    const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
+    const token = jwt.sign({ userId: user._id }, "ravi1234", {
       expiresIn: "1h",
     });
 
@@ -226,7 +226,7 @@ const sendForgetPasswordEmail = async (req, res) => {
       {
         _id: user._id,
       },
-      process.env.JWT_SECRET,
+      "ravi1234",
       {
         expiresIn: "10m",
       }
@@ -270,7 +270,7 @@ const updatePasswordHandler = async (req, res) => {
 
     const verifyToken = await jwt.verify(
       resetTkn.resetToken,
-      process.env.JWT_SECRET
+      "ravi1234"
     );
 
     if (!verifyToken) {

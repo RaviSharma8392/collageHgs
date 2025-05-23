@@ -14,7 +14,7 @@ const auth = async (req, res, next) => {
     token = token.split(" ")[1];
 
     try {
-      const decoded = jwt.verify(token, process.env.JWT_SECRET);
+      const decoded = jwt.verify(token,"ravi1234");
       if (!decoded.userId) {
         return ApiResponse.unauthorized("Invalid token format").send(res);
       }

@@ -19,7 +19,7 @@ const loginFacultyController = async (req, res) => {
       return ApiResponse.unauthorized("Invalid password").send(res);
     }
 
-    const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
+    const token = jwt.sign({ userId: user._id }, "ravi1234", {
       expiresIn: "1h",
     });
 
@@ -207,7 +207,7 @@ const sendFacultyResetPasswordEmail = async (req, res) => {
       return ApiResponse.notFound("No Faculty Found").send(res);
     }
 
-    const resetTkn = jwt.sign({ _id: user._id }, process.env.JWT_SECRET, {
+    const resetTkn = jwt.sign({ _id: user._id },"ravi1234", {
       expiresIn: "10m",
     });
 
@@ -244,7 +244,7 @@ const updateFacultyPasswordHandler = async (req, res) => {
       return ApiResponse.notFound("No Reset Request Found").send(res);
     }
 
-    const verifyToken = jwt.verify(resetTkn.resetToken, process.env.JWT_SECRET);
+    const verifyToken = jwt.verify(resetTkn.resetToken, "ravi1234");
     if (!verifyToken) {
       return ApiResponse.unauthorized("Token Expired or Invalid").send(res);
     }
