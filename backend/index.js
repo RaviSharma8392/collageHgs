@@ -10,7 +10,7 @@ var cors = require("cors");
 
 
 const corsOptions = {
-  origin: "http://localhost:3000", // your frontend URL
+  origin: "https://hermanngmeinerdegreecollege.netlify.app", // your frontend URL
   methods: ["GET", "POST", "PATCH", "DELETE"],
   credentials: true, // very important if you're using cookies or tokens
 };
