@@ -12,7 +12,7 @@ const Timetable = () => {
   const [isViewerOpen, setIsViewerOpen] = useState(false);
   const [zoomLevel, setZoomLevel] = useState(1);
   const userData = useSelector((state) => state.userData);
-  const baseUrl = process.env.REACT_APP_MEDIA_LINK || "https://collagehgs-1.onrender.com/media";
+  const baseUrl = process.env.REACT_APP_MEDIA_LINK || "https://collagehgs.onrender.com/media";
 
   useEffect(() => {
     const getTimetable = async () => {

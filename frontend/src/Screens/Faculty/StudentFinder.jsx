@@ -5,7 +5,7 @@ import axiosWrapper from "../../utils/AxiosWrapper";
 import CustomButton from "../../components/CustomButton";
 import NoData from "../../components/NoData";
 
-const StudentFinder = () => {const baseUrl = process.env.REACT_APP_MEDIA_LINK || "https://collagehgs-1.onrender.com/media";
+const StudentFinder = () => {const baseUrl = process.env.REACT_APP_MEDIA_LINK || "https://collagehgs.onrender.com/media";
 
   const [searchParams, setSearchParams] = useState({
     enrollmentNo: "",

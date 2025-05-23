@@ -7,7 +7,7 @@ import { toast } from "react-hot-toast";
 const Timetable = () => {
   const [timetable, setTimetable] = useState("");
   const userData = useSelector((state) => state.userData);
-    const baseUrl = process.env.REACT_APP_MEDIA_LINK || "https://collagehgs-1.onrender.com/media";
+    const baseUrl = process.env.REACT_APP_MEDIA_LINK || "https://collagehgs.onrender.com/media";
 
 
   useEffect(() => {
