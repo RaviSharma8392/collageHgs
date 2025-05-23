@@ -10,7 +10,7 @@ import CustomButton from "../../components/CustomButton";
 import { MdLink } from "react-icons/md";
 import { IoMdAdd } from "react-icons/io";
 const Material = () => {
-  const baseUrl = process.env.REACT_APP_MEDIA_LINK || "http://localhost:4000/media";
+  const baseUrl = process.env.REACT_APP_MEDIA_LINK || "https://collagehgs-1.onrender.com/media";
 
   const [materials, setMaterials] = useState([]);
   const [subjects, setSubjects] = useState([]);

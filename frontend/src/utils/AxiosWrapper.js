@@ -1,6 +1,6 @@
 import axios from "axios";
 const axiosWrapper = axios.create({
-  baseURL: "http://localhost:4000/api",
+  baseURL: "https://collagehgs-1.onrender.com/",
 });
 
 axiosWrapper.interceptors.response.use(
