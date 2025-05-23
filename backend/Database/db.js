@@ -4,7 +4,7 @@ const mongoURI = process.env.MONGODB_URI;
 
 const connectToMongo = () => {
   mongoose
-    .connect((mongoURI), { useNewUrlParser: true })
+    .connect(("mongodb+srv://ravisharmabhimtal:collage1234@hgscollage.bw8mb5h.mongodb.net/?retryWrites=true&w=majority&appName=hgscollage"), { useNewUrlParser: true })
     .then(() => {
       console.log("Connected to MongoDB Successfully");
     })
